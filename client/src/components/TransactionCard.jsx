@@ -29,7 +29,8 @@ const TransactionCard = ({
             rel='noopener noreferrer'
           >
             <p className='text-white text-base hover:text-[#37c7da]  transition-all duration-200 ease-in-out'>
-              From: {shortenAddress(addressFrom)}
+              <span className='font-bold text-[#37c7da]'>From:</span>{" "}
+              {shortenAddress(addressFrom)}
             </p>
           </a>
           <a
@@ -38,14 +39,19 @@ const TransactionCard = ({
             rel='noopener noreferrer'
           >
             <p className='text-white text-base hover:text-[#37c7da]  transition-all duration-200 ease-in-out'>
-              To: {shortenAddress(addressTo)}
+              <span className='font-bold text-[#37c7da]'>To:</span>{" "}
+              {shortenAddress(addressTo)}
             </p>
           </a>
-          <p className='text-white text-base'>Amount: {amount} ETH</p>
+          <p className='text-white text-base'>
+            <span className='text-[#37c7da]'>Amount:</span> {amount} ETH
+          </p>
           {message && (
             <>
               <br />
-              <p className='text-white text-base'>Message: {message}</p>
+              <p className='text-white text-base'>
+                <span className=' text-[#37c7da]'>Message:</span> {message}
+              </p>
             </>
           )}
         </div>
